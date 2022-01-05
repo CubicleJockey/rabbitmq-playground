@@ -1,16 +1,16 @@
-﻿using System.Text;
-using RabbitMQ.Client;
+﻿using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
+using System.Text;
 
 using static System.Console;
 
-namespace RabbitMQ.BasicReceive
+namespace RabbitMQ.Worker
 {
-    public class Receive
+    internal class Worker
     {
         public static void Main()
         {
-            const string QUEUE = "hello";
+            const string QUEUE = "task_queue";
 
             var factory = new ConnectionFactory { HostName = "localhost" };
 
@@ -26,6 +26,12 @@ namespace RabbitMQ.BasicReceive
                 var message = Encoding.UTF8.GetString(body);
 
                 WriteLine($" [x] Received '{message}'");
+
+                var dots = message.Split('.').Length - 1;
+                Thread.Sleep(dots * 1000);
+
+                WriteLine(" [x] Done.");
+
             };
 
             channel.BasicConsume(queue: QUEUE, autoAck: true, consumer: consumer);
