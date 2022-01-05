@@ -22,5 +22,9 @@ docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3.9-man
      * RabbitMQ.ReceiveLogs
  * [Routing](https://www.rabbitmq.com/tutorials/tutorial-four-dotnet.html)
    * Projects
-     * RabbitMQ.EmitsLogsDirect
+     * RabbitMQ.EmitLogsDirect
      * RabbitMQ.ReceiveLogsDirect
+ * [Topic Exchange](https://www.rabbitmq.com/tutorials/tutorial-five-dotnet.html)
+   * Projects
+     * RabbitMQ.EmitLogsTopic
+     * RabbitMQ.ReceiveLogsTopic
