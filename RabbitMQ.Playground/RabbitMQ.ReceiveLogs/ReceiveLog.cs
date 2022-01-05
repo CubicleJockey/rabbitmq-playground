@@ -21,7 +21,7 @@ namespace RabbitMQ.ReceiveLogs
             var model = channel.QueueDeclare();
             channel.QueueBind(queue: model.QueueName, exchange: EXCHANGE, routingKey: string.Empty);
 
-            Console.WriteLine(" [*] Waiting for logs.");
+            WriteLine(" [*] Waiting for logs.");
 
             var consumer = new EventingBasicConsumer(channel);
 
