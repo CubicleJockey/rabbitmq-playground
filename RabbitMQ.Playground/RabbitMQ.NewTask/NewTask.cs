@@ -32,12 +32,11 @@ namespace RabbitMQ.NewTask
             channel.BasicPublish(exchange: string.Empty, routingKey: QUEUE, basicProperties: default, body: body);
 
             WriteLine($" [x] Send {message}");
-
-            WriteLine(" [*] Waiting for messages. To exit press [any key].");
+            WriteLine("Press ANY Key to exit.");
             ReadLine();
         }
 
-        private static string GetMessage(string[] args) => args.Length > 0 ? string.Join(" ", args) : "Hello, World!";
+        private static string GetMessage(string[] args) => args.Length > 0 ? string.Join(" ", args) : "<Arguments were null so, Hello World!>";
     }
 }
  

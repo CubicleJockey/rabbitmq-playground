@@ -19,6 +19,11 @@ namespace RabbitMQ.Worker
 
             channel.QueueDeclare(queue: QUEUE, durable: false, exclusive: false, autoDelete: false, arguments: default);
 
+            //Even out the work load between multiple workers.
+            channel.BasicQos(prefetchSize: 0, prefetchCount: 1, global: false);
+
+            WriteLine(" [*] Waiting for messages.");
+
             var consumer = new EventingBasicConsumer(channel);
             consumer.Received += (model, ea) =>
             {
@@ -32,6 +37,13 @@ namespace RabbitMQ.Worker
 
                 WriteLine(" [x] Done.");
 
+                /*
+                 *Manual message acknowledgments are turned on by default.
+                 * In previous examples we explicitly turned them off by setting the autoAck ("automatic acknowledgement mode") parameter to true.
+                 * It's time to remove this flag and manually send a proper acknowledgment from the worker, once we're done with a task.
+                 */
+
+                channel.BasicAck(deliveryTag: ea.DeliveryTag, multiple: false);
             };
 
             channel.BasicConsume(queue: QUEUE, autoAck: true, consumer: consumer);
