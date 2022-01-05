@@ -16,7 +16,7 @@ namespace RabbitMQ.ReceiveLogs
             using var connection = factory.CreateConnection();
             using var channel = connection.CreateModel();
 
-            channel.ExchangeDeclare(exchange: "logs", type: ExchangeType.Fanout);
+            channel.ExchangeDeclare(exchange: EXCHANGE, type: ExchangeType.Fanout);
 
             var model = channel.QueueDeclare();
             channel.QueueBind(queue: model.QueueName, exchange: EXCHANGE, routingKey: string.Empty);
