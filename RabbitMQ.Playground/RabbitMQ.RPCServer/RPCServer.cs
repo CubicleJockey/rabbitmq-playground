@@ -7,7 +7,7 @@ using static System.Console;
 
 namespace RabbitMQ.RPCServer
 {
-    internal class RPCServer
+    internal class RpcServer
     {
         public static void Main()
         {

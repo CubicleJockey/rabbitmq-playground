@@ -27,15 +27,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitMQ.EmitLogsDirect", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitMQ.ReceiveLogsDirect", "RabbitMQ.ReceiveLogsDirect\RabbitMQ.ReceiveLogsDirect.csproj", "{3C99D6E4-57AB-4EBC-9B83-FAD5B2A22810}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQ.EmitLogsTopic", "RabbitMQ.EmitLogsTopic\RabbitMQ.EmitLogsTopic.csproj", "{5FA7C365-D011-4FD1-8491-7E0746FA4D38}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitMQ.EmitLogsTopic", "RabbitMQ.EmitLogsTopic\RabbitMQ.EmitLogsTopic.csproj", "{5FA7C365-D011-4FD1-8491-7E0746FA4D38}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQ.ReceivedLogsTopic", "RabbitMQ.ReceivedLogsTopic\RabbitMQ.ReceivedLogsTopic.csproj", "{8CE56961-3077-42F8-8C72-26FD73723D31}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitMQ.ReceivedLogsTopic", "RabbitMQ.ReceivedLogsTopic\RabbitMQ.ReceivedLogsTopic.csproj", "{8CE56961-3077-42F8-8C72-26FD73723D31}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Send", "Send", "{CFE43822-01B0-4C00-B9CA-C9EBB05F9A8D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Receive", "Receive", "{7C7C5FB8-F8E3-42E9-97C3-03E294745210}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQ.RPCServer", "RabbitMQ.RPCServer\RabbitMQ.RPCServer.csproj", "{0B950012-5951-42C0-8AA3-57C0900A41EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitMQ.RPCServer", "RabbitMQ.RPCServer\RabbitMQ.RPCServer.csproj", "{0B950012-5951-42C0-8AA3-57C0900A41EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitMQ.RPCClient", "RabbitMQ.RPCClient\RabbitMQ.RPCClient.csproj", "{3EDDDD97-FE1D-4A11-997A-5417D018DC27}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -87,6 +89,10 @@ Global
 		{0B950012-5951-42C0-8AA3-57C0900A41EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B950012-5951-42C0-8AA3-57C0900A41EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B950012-5951-42C0-8AA3-57C0900A41EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EDDDD97-FE1D-4A11-997A-5417D018DC27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EDDDD97-FE1D-4A11-997A-5417D018DC27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EDDDD97-FE1D-4A11-997A-5417D018DC27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EDDDD97-FE1D-4A11-997A-5417D018DC27}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -103,6 +109,7 @@ Global
 		{5FA7C365-D011-4FD1-8491-7E0746FA4D38} = {CFE43822-01B0-4C00-B9CA-C9EBB05F9A8D}
 		{8CE56961-3077-42F8-8C72-26FD73723D31} = {7C7C5FB8-F8E3-42E9-97C3-03E294745210}
 		{0B950012-5951-42C0-8AA3-57C0900A41EA} = {CFE43822-01B0-4C00-B9CA-C9EBB05F9A8D}
+		{3EDDDD97-FE1D-4A11-997A-5417D018DC27} = {7C7C5FB8-F8E3-42E9-97C3-03E294745210}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {765B1F09-68FC-407E-84AB-609CD2442854}
